@@ -1,0 +1,37 @@
+form > input,
+form > label {
+  display: block;
+  width: 100%;
+}
+
+input {
+  margin-bottom: 20px;
+}
+
+body {
+  text-align: center;
+}
+
+form {
+  text-align: left;
+  width: 300px;
+  margin: auto;
+}
+
+.checkbox-section {
+  text-align: center;
+}
+
+form button {
+  display: block;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 30px;
+}
+
+.remove-button {
+  margin-left: 10px;
+}
