@@ -2,23 +2,45 @@
 // Those instructions will give you details on each step.
 
 // STEP ONE - Create your Data Model.
-let dataModel = null;  // Assign your data model here, instead of null. This should be an array of "dog" objects.
-
+// Assign your data model here, instead of null. This should be an array of "dog" objects.
+let dataModel = [
+  {
+    name: "Rin Tin Tin",
+    breed: "German Shepherd",
+    age: 2,
+    likesTreats: true
+  },
+  {
+    name: "lassie",
+    breed: "Rough Collie",
+    age: 7,
+    likesTreats: true
+  },
+  {
+    name: " Balto",
+    breed: "Siberian Husky",
+    age: 4,
+    likesTreats: true
+  }
+]  
+for(i = 0;i < dataModel.length;i +=1){
+  let object = dataModel[i]
+  console.log(object)
+}
 
 // When this function is run, it is meant to use the user input to build
 // a dog object, and add the dog object to the data model array.
 function onSubmitDog (event) {
   event.preventDefault();
 
-  let nameInput = document.querySelector("#name_input");  // We provide a CSS selector, as a string, to identify which HTML element we want querySelector to find for us.
+ // We provide a CSS selector, as a string, to identify which HTML element we want querySelector to find for us.
+  let nameInput = document.querySelector("#name_input"); 
   let breedInput = document.querySelector("#breed_input");
   let ageInput = document.querySelector("#age_input");
   let treatsCheckbox = document.querySelector("#treats_input");
 
-  let name = nameInput.value;
-  let breed = breedInput.value;
-  let age = ageInput.value;
-  let likesTreats = treatsCheckbox.checked;
+ 
+  
   
   if (name === "" || breed === "" || age === "") {  // If any of these text boxes are empty...
     alert("Please fill out all of the fields!");
@@ -31,9 +53,20 @@ function onSubmitDog (event) {
   // How can you insert this dog object into the dogs array?
 
   // YOUR CODE HERE
+let name = nameInput.value;
+  let breed = breedInput.value; //propertyName.value is how we get the values provided by the user 
+  let age = ageInput.value;
+  let likesTreats = treatsCheckbox.checked; //this is .checked not .value because its a checkbox and the user doesn't provide a value only that the checkbox is checked or not  
 
+  let dog = {
+  name: name,
+  breed: breed,
+  age: age,
+  likesTreats:likesTreats 
+} 
+  dataModel.push(dog)
 
-  renderDogList(); // Now that we have added a new dog to the data model,
+  renderDogList(dataModel); // Now that we have added a new dog to the data model,
                    // we should render the dog list on the page again.
   
   // The following lines reset the form, so that it is ready for information
@@ -60,7 +93,23 @@ function renderDogList() {
   // code is in the instructions.
 
   // YOUR CODE HERE
+for(i = 0;i < dataModel.length;i +=1){
+  if (i === 0 (i.innerHTML <li>"No Dogs!"</li>))
+
+  else(let dog = 
+  i.value
+  let LiElem =document.createElement("li")
+  LiElem.innerText(`${name} a ${age} year old ${breed} and ${likesTreats}`)
+
+)
+let sendHomeButton = document.createElement("button");
+sendHomeButton.append("Send Home");
+sendHomeButton.addEventListener("click", function() {
+  removeDog(dog);
+})
+li.append(sendHomeButton);
 }
+
 
 
 // The function below is already completed for you. It removes a given 
