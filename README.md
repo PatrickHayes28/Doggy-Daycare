@@ -1,5 +1,2 @@
-# Kenzie Academy JavaScript Assignment
-
-Complete your work inside of `code.js`
-
-Follow the instructions provided on my.kenzie.academy for this assignment.
+Doggy Daycare registration form app 
+teaching about Array of Opjects 
